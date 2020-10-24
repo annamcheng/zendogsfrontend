@@ -2,7 +2,7 @@ import React from "react";
 
 const Form = (props) => {
   //STATE FOR THE FORM
-  const [formData, setFormData] = React.useEffect(props.dog);
+  const [formData, setFormData] = React.useState(props.dog);
 
   //FUNCTIONS
   const handleSubmit = (event) => {
@@ -20,18 +20,21 @@ const Form = (props) => {
       <input
         type="text"
         name="name"
+        placeholder="name"
         value={formData.name}
         onChange={handleChange}
       />
       <input
         type="number"
         name="age"
+        placeholder="age"
         value={formData.age}
         onChange={handleChange}
       />
       <input
         type="text"
         name="img"
+        placeholder="image link"
         value={formData.img}
         onChange={handleChange}
       />
